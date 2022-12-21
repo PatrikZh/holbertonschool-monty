@@ -20,6 +20,21 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 /**
+* global_s - the structure we are getting from abroad
+* @data: holds data
+* @extract: a file we are extracting
+* @token: the splitter for the line we are getting
+* @line: the line we are getting
+*/
+typedef struct global_s
+{
+	int data;
+	FILE *extract;
+	char *token, char *line;
+} global_t;
+
+extern global_t *global;
+/**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
