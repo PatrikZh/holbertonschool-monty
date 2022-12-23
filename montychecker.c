@@ -32,7 +32,7 @@ void checkop(stack_t **stack, unsigned int line_number)
 	}
 }
 /**
-* freer - frees everything
+* freer_f - frees everything
 * @stack: the stack carrying
 * @line_number: Where we grab the line from
 */
@@ -70,9 +70,9 @@ void parse(int argc, char *argv[])
 */
 void read_line(stack_t **stack)
 {
-	int len = 0, type = 0;
-	unsigned int line_number = 0;
+	int len = 0, type = 0; 
 	size_t n = 0;
+	unsigned int line_number = 0;
 
 	global.line = NULL;
 	while ((len = getline(&global.line, &n, global.extract)) != EOF)
