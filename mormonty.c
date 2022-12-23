@@ -77,9 +77,9 @@ void add(stack_t **stack, unsigned int line_number)
 		freer_f(stack, line_number);
 	}
 	tmp = *stack;
-	stack = (*stack)->next;
+	*stack = (*stack)->next;
 
 	(*stack)->n += tmp->n;
 	free(tmp);
-	(*stack->prev = NULL;
+	(*stack)->prev = NULL;
 }
