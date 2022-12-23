@@ -32,10 +32,9 @@ void push(stack_t **stack, unsigned int line_number)
  * @stack: stack struct
  * @line_number: where we grab 2
 */
-void pall(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int __attribute__ ((unused))line_number)
 {
 	stack_t *current;
-	(void)line_number;
 
 	current = *stack;
 	while (current)
