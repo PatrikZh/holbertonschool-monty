@@ -19,11 +19,7 @@ void push(stack_t **stack, unsigned int line_number)
 	new->prev = NULL;
 	new->next = *stack;
 	if (*stack)
-	{
-
 		(*stack)->prev = new;
-		(*stack)->next = NULL;
-	}
 	*stack = new;
 }
 
@@ -72,7 +68,7 @@ void pint(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		freer_f(stack, line_number);
 	}
-	printf("%d\n", (*stack)->n);
+	printf("%i\n", (*stack)->n);
 }
 /**
 * pop - removes top element of the stack

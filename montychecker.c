@@ -97,7 +97,7 @@ void read_line(stack_t **stack)
 			{
 				check_num(stack, line_number);
 				global.data = atoi(global.token);
-				if (type)
+				if (!type)
 					push(stack, line_number);
 				else
 					push_q(stack, line_number);
