@@ -13,6 +13,8 @@ void checkop(stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"nop", nop},
+		{"push_q", push_q},
 		{NULL, NULL}
 	};
 	int i;

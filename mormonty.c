@@ -52,5 +52,14 @@ void swap(stack_t **stack, unsigned int line_number)
 	(*stack)->n = tmp->n;
 	tmp->n = num;
 }
-
+/**
+* nop - literally does nothing
+* @line_number: Mason
+* @stack: My life
+*/
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)**stack;
+	(void)line_number;
+}
 
