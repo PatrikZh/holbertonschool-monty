@@ -33,6 +33,8 @@ void checkop(stack_t **stack, unsigned int line_number)
 }
 /**
 * freer - frees everything
+* @stack: the stack carrying
+* @line_number: Where we grab the line from
 */
 void freer_f(stack_t **stack, unsigned int __attribute__ ((unused))line_number)
 {
@@ -68,11 +70,10 @@ void parse(int argc, char *argv[])
 */
 void read_line(stack_t **stack)
 {
-	int len, type;
-	unsigned int line_number;
-	size_t n;
+	int len = 0, type = 0;
+	unsigned int line_number = 0;
+	size_t n = 0;
 
-	len = type = line_number = n = 0;
 	global.line = NULL;
 	while ((len = getline(&global.line, &n, global.extract)) != EOF)
 	{
