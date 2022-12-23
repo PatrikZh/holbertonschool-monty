@@ -34,7 +34,7 @@ void push_q(stack_t **stack, unsigned int line_number)
 /**
 * swap - does the switcheroo
 * @stack: the stack
-* line_number: do i even need to explain anymore
+* @line_number: do i even need to explain anymore
 */
 void swap(stack_t **stack, unsigned int line_number)
 {
