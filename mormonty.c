@@ -62,4 +62,27 @@ void nop(stack_t **stack, unsigned int line_number)
 	(void)**stack;
 	(void)line_number;
 }
+/**
+* add - adds the two top elements
+* @stack:are youu serious rn
+* @line_number: L + Ratio
+*/
+void add(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp;
 
+	if (!*stack || (*stack)->next);
+	{
+		fprintf(stderr, "L%d: can't  add, stack too short\n", line_number);
+		freer_f(stack, line_number);
+	}
+	tmp = *stack;
+	stack = (*stack)->next;
+
+	(*stack)->n += tmp->n;
+	free(tmp);
+	(*stack->prev = NULL;
+}
+
+
+}
