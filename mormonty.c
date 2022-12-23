@@ -31,3 +31,27 @@ void push_q(stack_t **stack, unsigned int line_number)
 		current->next = new;
 	}
 }
+/**
+* swap - does the switcheroo
+* @stack: the stack
+* line_number: do i even need to explain anymore
+*/
+void swap(stack_t **stack, unsigned int line_number)
+{
+	int num;
+	stack_t *tmp;
+
+	if (!*stack || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		freer_f(stack, line_number);
+	}
+	num = (*stack)->n;
+	tmp = (*stack)->next;
+
+	(*stack)->n = tmp->n;
+	tmp->n = num;
+}
+
+}
+
