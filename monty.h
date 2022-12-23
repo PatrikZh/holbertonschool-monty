@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -30,10 +31,10 @@ typedef struct global_s
 {
 	int data;
 	FILE *extract;
-	char *token, char *line;
+	char *token, *line;
 } global_t;
 
-extern global_t *global;
+extern global_t global;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -47,4 +48,22 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/* all prototypes */
+
+/* monty.c */
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t *stack);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+/* montychecker.c */
+void checkop(stack_t **stack, unsigned int line_number);
+void parse(int argc, char *argv[]);
+void read_line(stack_t **stack);
+void check_num(stack_t **stack, unsigned int line_number);
+void freer_f(stack_t **stack, unsigned int line_number);
+/* mormonty.c */
+void push_q(stack_t **stack, unsigned int line_number);
+
 #endif
