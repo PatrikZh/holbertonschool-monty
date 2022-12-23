@@ -65,5 +65,6 @@ void check_num(stack_t **stack, unsigned int line_number);
 void freer_f(stack_t **stack, unsigned int line_number);
 /* mormonty.c */
 void push_q(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_umber);
 
 #endif
