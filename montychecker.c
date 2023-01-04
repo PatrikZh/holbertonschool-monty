@@ -109,10 +109,7 @@ void read_line(stack_t **stack)
 				continue;
 			}
 			else
-			{
-				fprintf(stderr, "L%d: usage: push integer\n", line_number);
-				freer_f(stack, line_number);
-			}
+			lineclear(stack, line_number);
 		}
 		checkop(stack, line_number);
 	}
