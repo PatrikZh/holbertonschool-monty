@@ -74,7 +74,7 @@ void parse(int argc, char *argv[])
 */
 void read_line(stack_t **stack)
 {
-	int len = 0, type = 0; 
+	int len = 0, type = 0;
 	size_t n = 0;
 	unsigned int line_number = 0;
 
